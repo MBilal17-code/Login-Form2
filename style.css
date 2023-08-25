@@ -3,7 +3,9 @@
   padding: 0;
   border: none;
 }
-
+form{
+  width: 70%;
+}
 .main {
   height: 100vh;
   width: 100%;
@@ -32,6 +34,7 @@ background: radial-gradient(circle, rgba(151,200,193,1) 0%, rgba(180,168,177,1) 
   border-radius: 30px;
   flex-direction: column;
   align-items: center;
+  
   display: flex;
   background: rgb(221,174,194);
 background: radial-gradient(circle, rgba(221,174,194,1) 0%, rgba(189,195,199,1) 100%);
@@ -56,18 +59,23 @@ background: radial-gradient(circle, rgba(165,199,194,1) 0%, rgba(184,244,255,1) 
 background: radial-gradient(circle, rgba(122,109,115,1) 0%, rgba(44,62,80,1) 92%);
 }
 
-.form .icon i {
-  font-size: 70px;
-  position: absolute;
+.form .icon img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  /* position: absolute;
   color: #fff;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .inputs {
-  width: 70%;
+  width: 100%;
   margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .inputs .input1,
@@ -111,8 +119,9 @@ background: radial-gradient(circle, rgba(125,101,112,1) 0%, rgba(99,110,114,1) 9
 .inputs .last {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
-.inputs .last .check input:checked + label{
+.inputs .last .check input:checked{
   color: #2c3e50;
 }
 
@@ -125,7 +134,6 @@ background: radial-gradient(circle, rgba(125,101,112,1) 0%, rgba(99,110,114,1) 9
 ::placeholder {
   color: #fff;
 }
-
 .inputs .last .forgot a {
   text-decoration: none;
   font-style: italic;
@@ -162,6 +170,8 @@ background: radial-gradient(circle, rgba(221,174,194,1) 0%, rgba(189,195,199,1) 
   border-bottom-right-radius: 30px;
   font-size: 18px;
   font-weight: 700;
+  border: none;
+  outline: none;
 }
 
 #btn .btn:hover {
@@ -170,6 +180,8 @@ background: radial-gradient(circle, rgba(221,174,194,1) 0%, rgba(189,195,199,1) 
 
 #btn .btn:active {
   background-color: #96a2aa;
+  border: none;
+  outline: none;
 }
 
 @media (max-width:500px) {
@@ -182,7 +194,10 @@ background: radial-gradient(circle, rgba(221,174,194,1) 0%, rgba(189,195,199,1) 
     height: 100px;
     width: 100px;
   }
-
+  .form .icon img{
+    height: 100px;
+    width: 100px;
+  }
   .form .icon i {
     font-size: 60px;
 
@@ -229,12 +244,13 @@ background: radial-gradient(circle, rgba(221,174,194,1) 0%, rgba(189,195,199,1) 
     width: 90px;
   }
 
-  .form .icon i {
-    font-size: 50px;
-
+  .form .icon img {
+    height: 90px;
+    width: 90px;
   }
   #btn {
     width: 200px;
+    margin-top: -60px;
   }
   .inputs .input1 span i,
 .input2 span i {
@@ -256,7 +272,7 @@ background: radial-gradient(circle, rgba(221,174,194,1) 0%, rgba(189,195,199,1) 
   font-size: 15px;
   
 }
-.inputs {
+form {
   width: 80%;
 }
 .inputs .last .check label{
@@ -279,11 +295,13 @@ background: radial-gradient(circle, rgba(221,174,194,1) 0%, rgba(189,195,199,1) 
     top: -35px;
   }
 
-  .form .icon i {
-    font-size: 45px;
+  .form .icon img {
+    height: 70px;
+    width: 70px;
   }
   #btn {
-    width: 200px;
+    width: 180px;
+    margin-top: -60px;
   }
   .inputs .input1 span i,
 .input2 span i {
@@ -300,20 +318,19 @@ background: radial-gradient(circle, rgba(221,174,194,1) 0%, rgba(189,195,199,1) 
 .inputs .input2 {
   margin-bottom: 9px;
 }
-
+.inputs .last{
+  width: 100%;
+}
 .inputs .input1 input,
 .input2 input {
   padding: 3px 3px 3px 40px;
-}
-#btn {
-  margin-top: -60px;
 }
 #btn .btn {
   padding: 8px auto;
   font-size: 15px;
   
 }
-.inputs {
+form {
   width: 80%;
 }
 .inputs .last .check label{
